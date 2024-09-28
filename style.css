@@ -1,0 +1,717 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+:root{
+   /*Primary*/
+
+--Soft_Blue: hsl(231, 69%, 60%);
+--Soft_Red: hsl(0, 94%, 66%);
+
+/*Neutral*/
+
+--Grayish_Blue: hsl(229, 8%, 60%);
+--Very_Dark_Blue: hsl(229, 31%, 21%);
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0px;
+}
+ul{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;
+}
+li{
+    list-style: none;
+}
+li a {
+    color: var(--Very_Dark_Blue);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative; /* Ensure the link is positioned relative to its normal position */
+    transition: 0.5s ease;
+}
+
+li a::after {
+    content: "";
+    width: 0; 
+    height: 2px; 
+    background-color: var(--Soft_Red);
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    transition: width 0.5s ease; 
+}
+
+li a:hover::after {
+    width: 50%; 
+}
+
+li a:hover{
+    color: var(--Soft_Red);
+}
+header button{
+    width: 200px;
+    height: 40px;
+    background-color: var(--Soft_Red);
+    border: 3px solid var(--Soft_Red);
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 20px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+header button:hover{
+    color: var(--Soft_Red);
+    background-color: transparent;
+}
+.home_section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 100%;
+}
+.text_container{
+    margin-left: 100px;
+}
+.text_container h1{
+    font-size: 3rem;
+    width: 50%;
+    color: var(--Very_Dark_Blue);
+}
+.text_container p{
+    width: 50%;
+    color: var(--Grayish_Blue);
+    line-height: 25px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.text_container button{
+    width: 200px;
+    height: 40px;
+    border: 3px solid var(--Very_Dark_Blue);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--Very_Dark_Blue);
+    background-color: transparent;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.text_container button:hover{
+    border: 3px solid var(--Soft_Blue);
+    color: var(--Soft_Blue);
+}
+.text_container .active{
+    color: #fff;
+    background-color: var(--Very_Dark_Blue);
+    transition: 0.5s ease;
+}
+.text_container .active:hover{
+    color: var(--Soft_Blue);
+    background-color: transparent;
+    border: 3px solid var(--Soft_Blue);
+}
+.image_container{
+    width: 50%;
+    background: var(--Soft_Blue);
+    border-radius: 300px 100px 300px 100px;
+    position: relative;
+}
+.image_container img{
+    width: 500px;
+    
+}
+#Features_section{
+    display: flex;
+    flex-direction: column;
+    gap: 20PX;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+#Features_section h2{
+    color: var(--Very_Dark_Blue);
+    font-size: 2rem;
+}
+#Features_section p{
+    width: 50%;
+    color: var(--Grayish_Blue);
+    line-height: 25px;
+    margin-top: 16px;
+    font-size: 20px;
+    text-align: center;
+}
+.select_container{
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.select_container span{
+    color: var(--Grayish_Blue);
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 10px;
+}
+.select_active{
+    border-bottom: 3px solid var(--Soft_Red);
+}
+.features_container{
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.features_container img{
+    width: 400px;
+    transition: 0.5s all ease;
+}
+.features_text_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 50%;
+    gap: 20PX;
+}
+.features_text_content h1{
+    color: var(--Very_Dark_Blue);
+    transition: 0.5s all ease;
+}
+.features_text_content span{
+    color: var(--Grayish_Blue);
+    width: 50%;
+    transition: 0.5s all ease;
+}
+.features_text_content button{
+    width: 100px;
+    height: 30px;
+    color: #fff;
+    background-color: var(--Soft_Blue);
+    border-radius: 10px;
+    border: none; outline: none;
+    cursor: pointer;
+}
+#Pricing_section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    flex-direction: column;
+    gap: 20PX;
+}
+#Pricing_section  h1{
+    color: var(--Very_Dark_Blue);
+    font-size: 2rem;
+}
+#Pricing_section  p{
+    color: var(--Grayish_Blue);
+    width: 30%;
+    text-align: center;
+}
+.all_app{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 20PX;
+}
+.only_app{
+    display: flex;
+    flex-direction: column;
+    gap: 20PX;
+    padding: 20PX;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 5px 10px var(--Very_Dark_Blue);
+    border-radius: 20px;
+}
+.only_app img{
+    height: 100px;
+    width: 100px;
+}
+.only_app h3{
+    color: var(--Very_Dark_Blue);
+}
+.only_app h4{
+    color: var(--Grayish_Blue);
+}
+.only_app button{
+    width: 100%;
+    height: 30px;
+    border-radius: 20px;
+    border: 2px solid var(--Soft_Blue);
+    background-color: var(--Soft_Blue);
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.5s all ease;
+    padding: 5px;
+}
+.only_app button:hover{
+    color: var(--Soft_Blue);
+    background-color: transparent;
+}
+.only_app:nth-child(2){
+    height: 270px;
+}
+.only_app:nth-child(3){
+    height: 300px;
+}
+.Frequently_container{
+    display: flex;
+    flex-direction: column;
+    gap: 20PX;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+.Frequently_container h1{
+    color: var(--Very_Dark_Blue);
+    font-size: 2rem;
+}
+.Frequently_container p{
+    color: var(--Grayish_Blue);
+    width: 30%;
+    text-align: center;
+}
+.questions_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.only_quetion {
+    display: flex;
+    flex-direction: column;
+    gap: 20PX;
+    border-bottom: 1px solid var(--Grayish_Blue);
+    border-top: 1px solid var(--Grayish_Blue);
+    width: 400px;
+    padding: 20px;
+}
+.header_quetion{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+} 
+.header_quetion h3{
+    color: var(--Very_Dark_Blue);
+    transition: 0.5S all ease;
+    cursor: pointer;
+}
+.header_quetion img{
+    cursor: pointer;
+}
+.header_quetion h3:hover{
+    color: var(--Soft_Red);
+}
+.only_quetion p{
+    width: 90%;
+    display: none;
+}
+.only_quetion p {
+    display: none;
+    color: hsl(229, 8%, 60%);
+    font-size: 14px;
+    line-height: 1.5em;
+  }
+  
+  .only_quetion.active p {
+    display: block;
+  }
+  
+  .header_quetion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .image_btn {
+    transition: transform 0.3s ease;
+  }
+  
+  .rotate {
+    transform: rotate(180deg);
+  }
+  
+  .Frequently_container button{
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+    border: 2px solid var(--Soft_Blue);
+    background-color: var(--Soft_Blue);
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.5s all ease;
+    padding: 5px;
+}
+.Frequently_container button:hover{
+    color: var(--Soft_Blue);
+    background-color: transparent;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20PX;
+   padding-top: 20px;
+    background-color: var(--Soft_Blue);
+    margin-top: 40px;
+    color: #fff;
+}
+
+.email_container{
+    display: flex;
+    gap: 20PX;
+}
+.email_container input{
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    padding-left: 10px;
+    outline: none;
+}
+.email_container input::placeholder{
+    font-weight: 500;
+}
+.email_container button {
+    width: 100px;
+    height: 40px;
+    border:none;
+    border-radius: 20px;
+    background-color: var(--Soft_Red);
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s all ease;
+}
+
+.email_container button:hover{
+   
+    color: var(--Soft_Red);
+    background-color:#fff;
+}
+.errors_email{
+    margin-top: -20px;
+    margin-left: -300px;
+    color: var(--Soft_Red);
+}
+.contact_footer_container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: var(--Very_Dark_Blue);
+    height: 100px;
+    padding: 10px;
+}
+.contact_footer_container ul li a{
+    color: var(--Grayish_Blue);
+}
+.social_media{
+    display: flex;
+    gap: 20PX;
+}
+.social_media i{
+    cursor: pointer;
+    transition: 0.6s all ease;
+    font-size: 20px;
+}
+.social_media i:hover{
+    color: var(--Soft_Red);
+}
+.open_nav{
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    header {
+      padding: 10px 0;
+      background-color: #fff;
+      justify-content: space-between;
+      padding: 10px 10px;
+    }
+    .open_nav{
+        display: block;
+    }
+   .navbare{
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      gap: 15px;
+      position: fixed;
+      background-color: #fff;
+      top: 45px;
+      padding: 20px;
+      display: none;
+      transition: 0.5s all ease;
+    }
+    .new-navbare{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 15px;
+        position: fixed;
+        background-color: #fff;
+        top: 45px;
+        padding: 20px;
+        display: flex;
+        transition: 0.5s all ease;
+      }
+    header button {
+      width: 150px;
+      height: 35px;
+    }
+  
+    .home_section {
+      flex-direction: column;
+      text-align: center;
+      height: auto;
+      margin-top: 40px;
+    }
+  
+    .text_container {
+        margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10PX;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .text_container h1 {
+      font-size: 2rem;
+      width: 80%;
+    }
+  
+    .text_container p {
+      width: 80%;
+      font-size: 16px;
+    }
+  
+    .text_container button {
+      width: 180px;
+      height: 35px;
+      font-size: 18px;
+    }
+  
+    .image_container {
+      width: 80%;
+      margin-top: 20px;
+      border-radius: 200px 80px 200px 80px;
+    }
+  
+    .image_container img {
+      width: 100%;
+    }
+  
+    #Features_section p {
+      width: 80%;
+    }
+  
+    .select_container {
+      flex-direction: column;
+      width: 100%;
+      gap: 10px;
+    }
+  
+    .features_container {
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .features_container img {
+      width: 100%;
+    }
+  
+    .features_text_content {
+      width: 100%;
+      gap: 10px;
+    }
+  
+    .features_text_content h1,
+    .features_text_content span {
+      width: 100%;
+      font-size: 18px;
+    }
+  
+    #Pricing_section p {
+      width: 80%;
+    }
+  
+    .all_app {
+      flex-direction: column;
+      width: 100%;
+      gap: 10px;
+    }
+  
+    .only_app {
+      width: 90%;
+    }
+  
+    .Frequently_container p {
+      width: 80%;
+    }
+  
+    .only_quetion {
+      width: 90%;
+    }
+  
+    footer {
+      padding: 20px 0;
+    }
+  
+    .contact_footer_container {
+      flex-direction: column;
+      height: auto;
+      gap: 20px;
+    }
+  
+    .social_media i {
+      font-size: 24px;
+    }
+    .contact_footer_container{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 90%;
+    background-color: transparent;
+        height: 100px;
+        padding: 10px;
+    }
+    .email_container input{
+        width: 250px;
+        height: 40px;
+        border-radius: 20px;
+        border: none;
+        padding-left: 10px;
+        outline: none;
+    }
+    .contact_footer_container ul {
+        gap: 20PX;
+    }
+    .contact_footer_container ul li a{
+        color: var(--Very_Dark_Blue);
+    }
+    footer h1{
+        font-size: 1.5rem;
+        width: 70%;
+    }
+    .only_app{
+        display: flex;
+        flex-direction: column;
+        gap: 20PX;
+        padding: 20PX;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 5px 10px var(--Very_Dark_Blue);
+        border-radius: 20px;
+        width: 80%;
+    }
+    .all_app{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20PX;
+    }
+    .Frequently_container{
+        display: flex;
+        flex-direction: column;
+        gap: 20PX;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        text-align: center;
+    }
+    .Frequently_container h1{
+        color: var(--Very_Dark_Blue);
+        font-size: 2rem;
+    }
+    .Frequently_container p{
+        color: var(--Grayish_Blue);
+        width: 30%;
+        text-align: center;
+    }
+    .select_container{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        gap: 10PX;
+        flex-direction: row;
+    }
+    .select_container span{
+        color: var(--Grayish_Blue);
+        font-size: 0.7rem;
+        font-weight: 500;
+        cursor: pointer;
+        padding: 10px;
+    }
+    .features_container img{
+        width: 90%;
+        transition: 0.5s all ease;
+    }
+    .features_text_content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 20PX;
+        margin-top: 20px;
+    }
+    .features_text_content h1{
+        color: var(--Very_Dark_Blue);
+        transition: 0.5s all ease;
+    }
+    .features_text_content span{
+        color: var(--Grayish_Blue);
+        width: 90%;
+        transition: 0.5s all ease;
+    }
+    .features_text_content button{
+        width: 100px;
+        height: 30px;
+        color: #fff;
+        background-color: var(--Soft_Blue);
+        border-radius: 10px;
+        border: none; outline: none;
+        cursor: pointer;
+    }
+    .Frequently_container p{
+        color: var(--Grayish_Blue);
+        width: 90%;
+        text-align: center;
+    }
+    #Pricing_section  h1{
+        color: var(--Very_Dark_Blue);
+        font-size: 1.5rem;
+    }
+  }
+  
+  
